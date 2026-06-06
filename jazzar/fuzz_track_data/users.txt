@@ -1,1 +1,0 @@
-customer1|CUSTOMER|salt|hash|false|0|Customer One|1001|0790001001

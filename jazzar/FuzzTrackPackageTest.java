@@ -1,33 +1,35 @@
 import com.code_intelligence.jazzer.api.FuzzedDataProvider;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
+import java.io.FileReader;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class FuzzTrackPackageTest {
-    public static void fuzzerTestOneInput(FuzzedDataProvider data) throws Exception {
+    private static int attempt = 0;
+
+    public static void fuzzerTestOneInput(FuzzedDataProvider data) {
         String shipmentId = data.consumeString(30);
-        byte[] inputBytes = (shipmentId + "\n").getBytes(StandardCharsets.UTF_8);
-        PrintStream originalOut = System.out;
 
-        try (InputStream inputStream = new ByteArrayInputStream(inputBytes);
-             Scanner sc = new Scanner(inputStream, StandardCharsets.UTF_8.name())) {
+        attempt++;
+        System.out.println("Attempt " + attempt
+                + " | shipmentId=" + clean(shipmentId));
 
-            System.setOut(new PrintStream(OutputStream.nullOutputStream()));
+        try (Scanner sc = new Scanner(shipmentId + "\n");
+             FileReader reader = new FileReader(".env")) {
+            Properties env = new Properties();
+            env.load(reader);
+
+            Map<String, Shipment> shipments = new LinkedHashMap<>();
+            Map<String, List<TrackingRecord>> trackingHistory = new LinkedHashMap<>();
 
             FileDB db = new FileDB(
-                    "fuzz_track_data/users.txt",
-                    "fuzz_track_data/shipments.txt",
-                    "fuzz_track_data/tracking.txt",
-                    "fuzz_track_data/security_policy.txt");
-
-            Map<String, Shipment> shipments = db.loadShipments();
-            Map<String, List<TrackingRecord>> trackingHistory = db.loadTrackingHistory();
+                    env.getProperty("USERS_FILE_PATH"),
+                    env.getProperty("SHIPMENTS_FILE_PATH"),
+                    env.getProperty("TRACKING_FILE_PATH"),
+                    env.getProperty("SECURITY_POLICY_FILE_PATH"));
             ShipmentService service = new ShipmentService(db);
 
             service.trackPackage(sc, shipments, trackingHistory);
@@ -35,9 +37,11 @@ public class FuzzTrackPackageTest {
         } catch (IllegalArgumentException e) {
             // Acceptable input rejection.
         } catch (Exception e) {
-            throw e;
-        } finally {
-            System.setOut(originalOut);
+            throw new RuntimeException("Track package function crashed with fuzzed input", e);
         }
+    }
+
+    private static String clean(String value) {
+        return value.replace("\r", "\\r").replace("\n", "\\n");
     }
 }

@@ -1,1 +1,0 @@
-SHP1001|customer1|Customer One|Receiver One|Amman Warehouse|Irbid Office|IN_TRANSIT|driver1|1715700000000|1715703600000|dispatcher1|DISPATCHER

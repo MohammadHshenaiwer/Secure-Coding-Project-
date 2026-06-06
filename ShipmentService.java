@@ -19,30 +19,6 @@ public class ShipmentService {
         createShipment(customer, customer, shipments, trackingHistory, sc);
     }
 
-    public void createShipmentForExistingCustomer(User actor,
-                                                  Map<String, User> users,
-                                                  Map<String, Shipment> shipments,
-                                                  Map<String, List<TrackingRecord>> trackingHistory,
-                                                  Scanner sc) {
-        if (actor.role != Role.ADMIN && actor.role != Role.DISPATCHER) {
-            MyLogger.writeToWarning("UNAUTHORIZED_ACTION: create_shipment_for_customer username=" + actor.username);
-            System.out.println("Only admin or dispatcher can create shipments for customers.");
-            return;
-        }
-
-        System.out.println("\n=== Create Shipment For Customer ===");
-        System.out.print("Customer username: ");
-        String customerUsername = sc.nextLine().trim().toLowerCase();
-
-        User customer = users.get(customerUsername);
-        if (customer == null || customer.role != Role.CUSTOMER) {
-            System.out.println("Customer not found.");
-            return;
-        }
-
-        createShipment(customer, actor, shipments, trackingHistory, sc);
-    }
-
     public void assignDriver(User actor,
                              Map<String, User> users,
                              Map<String, Shipment> shipments,

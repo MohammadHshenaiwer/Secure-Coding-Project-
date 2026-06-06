@@ -1,6 +1,0 @@
-minPasswordLength=10
-minUppercaseLetters=1
-minLowercaseLetters=1
-minDigits=1
-minSpecialCharacters=1
-maxLoginAttempts=5

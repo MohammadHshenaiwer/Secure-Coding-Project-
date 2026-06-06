@@ -1,15 +1,25 @@
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class ShipTrackApp {
     public static void main(String[] args) {
-        String usersPath = "data/users.txt";
-        String shipmentsPath = "data/shipments.txt";
-        String trackingPath = "data/tracking.txt";
-        String securityPolicyPath = "data/security_policy.txt";
+        Properties env = new Properties();
+        try (FileReader reader = new FileReader(".env")) {
+            env.load(reader);
+        } catch (IOException e) {
+            System.out.println("Could not read .env file.");
+            return;
+        }
 
-        FileDB db = new FileDB(usersPath, shipmentsPath, trackingPath, securityPolicyPath);
+        FileDB db = new FileDB(
+                env.getProperty("USERS_FILE_PATH"),
+                env.getProperty("SHIPMENTS_FILE_PATH"),
+                env.getProperty("TRACKING_FILE_PATH"),
+                env.getProperty("SECURITY_POLICY_FILE_PATH"));
         AuthService auth = new AuthService(db);
         ShipmentService shipmentService = new ShipmentService(db);
 
@@ -73,13 +83,12 @@ public class ShipTrackApp {
                 System.out.println("5) List Users");
                 System.out.println("6) Update Security Policy");
                 System.out.println("7) View Logs");
-                System.out.println("8) Create Shipment For Customer");
-                System.out.println("9) Assign Driver");
-                System.out.println("10) List All Shipments");
-                System.out.println("11) Update Shipment Status");
-                System.out.println("12) Track Package");
-                System.out.println("13) Security Principles");
-                System.out.println("14) Logout");
+                System.out.println("8) Assign Driver");
+                System.out.println("9) List All Shipments");
+                System.out.println("10) Update Shipment Status");
+                System.out.println("11) Track Package");
+                System.out.println("12) Security Principles");
+                System.out.println("13) Logout");
                 System.out.print("Choose: ");
 
                 String choice = sc.nextLine().trim();
@@ -99,44 +108,39 @@ public class ShipTrackApp {
                 else if (choice.equals("7"))
                     MyLogger.printLogs(user);
                 else if (choice.equals("8"))
-                    shipmentService.createShipmentForExistingCustomer(user, users, shipments, trackingHistory, sc);
-                else if (choice.equals("9"))
                     shipmentService.assignDriver(user, users, shipments, trackingHistory, sc);
-                else if (choice.equals("10"))
+                else if (choice.equals("9"))
                     shipmentService.listAllShipments(shipments);
-                else if (choice.equals("11"))
+                else if (choice.equals("10"))
                     shipmentService.updateShipmentStatus(user, shipments, trackingHistory, sc);
-                else if (choice.equals("12"))
+                else if (choice.equals("11"))
                     shipmentService.trackPackage(sc, shipments, trackingHistory);
-                else if (choice.equals("13"))
+                else if (choice.equals("12"))
                     printSecurityPrinciples();
-                else if (choice.equals("14"))
+                else if (choice.equals("13"))
                     return;
                 else
                     System.out.println("Invalid option.");
 
             } else if (user.role == Role.DISPATCHER) {
-                System.out.println("1) Create Shipment For Customer");
-                System.out.println("2) Assign Driver");
-                System.out.println("3) Update Shipment Status");
-                System.out.println("4) List All Shipments");
-                System.out.println("5) Track Package");
-                System.out.println("6) Logout");
+                System.out.println("1) Assign Driver");
+                System.out.println("2) Update Shipment Status");
+                System.out.println("3) List All Shipments");
+                System.out.println("4) Track Package");
+                System.out.println("5) Logout");
                 System.out.print("Choose: ");
 
                 String choice = sc.nextLine().trim();
 
                 if (choice.equals("1"))
-                    shipmentService.createShipmentForExistingCustomer(user, users, shipments, trackingHistory, sc);
-                else if (choice.equals("2"))
                     shipmentService.assignDriver(user, users, shipments, trackingHistory, sc);
-                else if (choice.equals("3"))
+                else if (choice.equals("2"))
                     shipmentService.updateShipmentStatus(user, shipments, trackingHistory, sc);
-                else if (choice.equals("4"))
+                else if (choice.equals("3"))
                     shipmentService.listAllShipments(shipments);
-                else if (choice.equals("5"))
+                else if (choice.equals("4"))
                     shipmentService.trackPackage(sc, shipments, trackingHistory);
-                else if (choice.equals("6"))
+                else if (choice.equals("5"))
                     return;
                 else
                     System.out.println("Invalid option.");

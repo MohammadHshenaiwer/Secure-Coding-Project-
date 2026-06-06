@@ -1,0 +1,6 @@
+admin|ADMIN|mvnyRfX9Tx59DZtc4d3Ksg==|5YbWbYW98g1vDgqOZG1v3/xn1bV58PxGd+2WTk7Trak=|false|0|System Admin|admin|N/A
+staff1|DISPATCHER|t129ML+MjSq+7TgCi3uAlw==|jgJZpqa700LP9FDRQmDf6aA2YWQrJOij1tKTUtBe0wc=|false|0|mohammad|1|07985648557
+staff2|DRIVER|HzwnyViXVu57ul8nDsX/IQ==|/V4xey3S+XMzpZN33vM/g/CYfXd+iFJJF/lkvgCcAe4=|false|0|mohammad hani|2|3
+customer1|CUSTOMER|cuTJMZ1jT/vSboBB6v/uOg==|nL2HXNgGl6TpjBF9aYsU1tz5bIrfu69OMQRFW36pZmc=|false|0|mohammad|3|3
+ahmad|DRIVER|yAYeuPADVvfjyiPFq6sB2A==|0UmrvDxLogLw7ArYJ7QuHVefwYpjwH2vXNQO1hy2C5E=|false|0|staff3|4|4
+omar|CUSTOMER|6fVNJrkGnAoJdMeeocqanA==|gAchjhsjOeMaUFF9Fm96uE66g+qVhc0zTQwZ/UzqrGg=|false|0|omar|6|6
