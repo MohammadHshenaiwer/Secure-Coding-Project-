@@ -156063,3 +156063,124 @@
 2026-06-01T22:09:44.938868800Z | WARNING | LOGIN_FAIL: user_not_found username=
 2026-06-01T22:09:44.939873500Z | WARNING | LOGIN_FAIL: user_not_found username=
 2026-06-01T22:09:44.940874100Z | WARNING | LOGIN_FAIL: user_not_found username=o
+2026-06-06T21:38:35.358719300Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.378940200Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807819153635534 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:38:35.426607900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.455539700Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.477815900Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:38:35.502356400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.526482400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.528481800Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807819155278463 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:38:35.557501300Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.579778900Z | INFO | LOGIN_OK: username=customer1 role=CUSTOMER
+2026-06-06T21:38:35.606866Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.631496Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.636500900Z | WARNING | LOGIN_FAIL: user_not_found username=unknown
+2026-06-06T21:38:35.660531600Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:38:35.680884400Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:38:35.702507600Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=2
+2026-06-06T21:38:35.702507600Z | WARNING | ACCOUNT_LOCKED: username=customer1
+2026-06-06T21:43:37.060685100Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.084814100Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807822170655655 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:43:37.155468100Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.189607100Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.218102800Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:43:37.254780300Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.278249100Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.279753500Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807822172785190 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:43:37.309288900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.334033200Z | INFO | LOGIN_OK: username=customer1 role=CUSTOMER
+2026-06-06T21:43:37.362416200Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.388245600Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.391759700Z | WARNING | LOGIN_FAIL: user_not_found username=unknown
+2026-06-06T21:43:37.416248300Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:43:37.437371700Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:43:37.457744300Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=2
+2026-06-06T21:43:37.458745300Z | WARNING | ACCOUNT_LOCKED: username=customer1
+2026-06-06T21:45:27.743811300Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:27.767431Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807823277475926 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:45:27.835586400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:27.871310100Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:27.900867500Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:45:27.929631900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:27.953929800Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:27.955929700Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807823279547314 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:45:27.986425900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:28.010884400Z | INFO | LOGIN_OK: username=customer1 role=CUSTOMER
+2026-06-06T21:45:28.038446500Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:28.063614700Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:28.068617Z | WARNING | LOGIN_FAIL: user_not_found username=unknown
+2026-06-06T21:45:28.096745900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:45:28.126030100Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:45:28.148623900Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=2
+2026-06-06T21:45:28.148623900Z | WARNING | ACCOUNT_LOCKED: username=customer1
+2026-06-06T21:51:12.688930400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:12.712802300Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807826726931737 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:12.773505600Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:12.808345900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:12.839169400Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:12.869094400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:12.894908700Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:12.896908600Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807826728958168 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:12.929040900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:12.952813600Z | INFO | LOGIN_OK: username=customer1 role=CUSTOMER
+2026-06-06T21:51:12.981357200Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:13.005405500Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:13.011432500Z | WARNING | LOGIN_FAIL: user_not_found username=unknown
+2026-06-06T21:51:13.035325100Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:13.060874600Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:13.083501900Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=2
+2026-06-06T21:51:13.083501900Z | WARNING | ACCOUNT_LOCKED: username=customer1
+2026-06-06T21:51:27.854553800Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:27.880511800Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807826878596063 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:27.945593200Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:27.980655800Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:28.011396Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:28.044049400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:28.069262300Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:28.070767300Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807826880692580 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:28.102848200Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:28.127400100Z | INFO | LOGIN_OK: username=customer1 role=CUSTOMER
+2026-06-06T21:51:28.154725500Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:28.181552500Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:28.185598300Z | WARNING | LOGIN_FAIL: user_not_found username=unknown
+2026-06-06T21:51:28.210754600Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:28.232109300Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:28.255130100Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=2
+2026-06-06T21:51:28.256130600Z | WARNING | ACCOUNT_LOCKED: username=customer1
+2026-06-06T21:51:30.862954900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:30.906001200Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:41.967375300Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:41.991905Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807827019711012 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:42.057590700Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.092858700Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.126297400Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:42.160863100Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.186459600Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.187460800Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807827021864776 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:42.218343400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.242360100Z | INFO | LOGIN_OK: username=customer1 role=CUSTOMER
+2026-06-06T21:51:42.268403900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.292678600Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.297678300Z | WARNING | LOGIN_FAIL: user_not_found username=unknown
+2026-06-06T21:51:42.321749500Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:42.344320400Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:42.367277900Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=2
+2026-06-06T21:51:42.367277900Z | WARNING | ACCOUNT_LOCKED: username=customer1
+2026-06-06T21:51:47.872918Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:47.899506200Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807827078779712 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:47.968362400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.004509400Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.035410100Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:48.070542Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.094673Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.096673300Z | INFO | SHIPMENT_ACTION: created shipment=SHP17807827080951793 customer=customer1 by=customer1 role=CUSTOMER
+2026-06-06T21:51:48.125847600Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.147410500Z | INFO | LOGIN_OK: username=customer1 role=CUSTOMER
+2026-06-06T21:51:48.173735Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.199310900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.203351200Z | WARNING | LOGIN_FAIL: user_not_found username=unknown
+2026-06-06T21:51:48.227415900Z | INFO | REGISTER: new_customer username=customer1
+2026-06-06T21:51:48.248474700Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=1
+2026-06-06T21:51:48.269454800Z | WARNING | LOGIN_FAIL: wrong_password username=customer1 attempts=2
+2026-06-06T21:51:48.271492600Z | WARNING | ACCOUNT_LOCKED: username=customer1
